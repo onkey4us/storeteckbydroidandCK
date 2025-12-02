@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="TechStore - Cửa hàng công nghệ cao cấp. iPhone, MacBook, AirPods và phụ kiện chính hãng.">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>TechStore | Cửa Hàng Công Nghệ Cao Cấp</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="#" class="nav__logo">
+        <span class="logo-icon">◆</span>
+        <span>TechStore</span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#products">Sản Phẩm</a></li>
+        <li><a href="#featured">Nổi Bật</a></li>
+        <li><a href="#categories">Danh Mục</a></li>
+        <li><a href="#testimonials">Đánh Giá</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+        <button class="cart-btn" id="cartBtn" aria-label="Giỏ hàng">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 6h15l-1.5 9h-12z"/>
+            <circle cx="9" cy="20" r="1"/>
+            <circle cx="18" cy="20" r="1"/>
+            <path d="M3 3h3l1 3"/>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+      </div>
+      <div class="hero__content">
+        <div class="hero__badge" data-reveal>
+          <span class="badge-dot"></span>
+          Miễn phí vận chuyển đơn từ 500K
+        </div>
+        <h1 class="hero__title" data-reveal>
+          Công Nghệ<br>
+          <span class="gradient-text">Đẳng Cấp</span>
+        </h1>
+        <p class="hero__subtitle" data-reveal data-reveal-delay="1">
+          Khám phá bộ sưu tập iPhone, MacBook và phụ kiện cao cấp. 
+          Chính hãng 100%, bảo hành toàn diện.
+        </p>
+        <div class="hero__cta" data-reveal data-reveal-delay="2">
+          <a href="#products" class="btn btn--primary btn--large">
+            <span>Mua Ngay</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="#featured" class="btn btn--glass btn--large">Xem Nổi Bật</a>
+        </div>
+        <div class="hero__stats" data-reveal data-reveal-delay="3">
+          <div class="stat">
+            <span class="stat__number">10K+</span>
+            <span class="stat__label">Khách hàng</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">99%</span>
+            <span class="stat__label">Hài lòng</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">24/7</span>
+            <span class="stat__label">Hỗ trợ</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__product" data-reveal data-reveal-delay="2">
+        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800&q=80" 
+             alt="iPhone 15 Pro Max Titanium" 
+             class="hero__product-image">
+        <div class="hero__product-info glass">
+          <span class="product-tag">Mới</span>
+          <h3>iPhone 15 Pro Max</h3>
+          <p>Titanium • 256GB</p>
+          <div class="hero__product-footer">
+            <span class="price">34.990.000₫</span>
+            <button class="btn btn--cart btn--cart-hero" data-product="iphone-15-pro-max-hero" data-price="34990000">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <h2 class="section-title">Danh Mục Sản Phẩm</h2>
+          <p class="section-subtitle">Khám phá theo nhu cầu của bạn</p>
+        </div>
+        <div class="category-grid">
+          <a href="#" class="category-card" data-reveal data-reveal-delay="1">
+            <div class="category-card__icon">📱</div>
+            <h3>iPhone</h3>
+            <p>12 sản phẩm</p>
+          </a>
+          <a href="#" class="category-card" data-reveal data-reveal-delay="2">
+            <div class="category-card__icon">💻</div>
+            <h3>MacBook</h3>
+            <p>8 sản phẩm</p>
+          </a>
+          <a href="#" class="category-card" data-reveal data-reveal-delay="3">
+            <div class="category-card__icon">⌚</div>
+            <h3>Apple Watch</h3>
+            <p>6 sản phẩm</p>
+          </a>
+          <a href="#" class="category-card" data-reveal data-reveal-delay="4">
+            <div class="category-card__icon">🎧</div>
+            <h3>AirPods</h3>
+            <p>4 sản phẩm</p>
+          </a>
+          <a href="#" class="category-card" data-reveal data-reveal-delay="5">
+            <div class="category-card__icon">📦</div>
+            <h3>Phụ Kiện</h3>
+            <p>20+ sản phẩm</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured" id="featured">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <h2 class="section-title">Sản Phẩm Nổi Bật</h2>
+          <p class="section-subtitle">Được yêu thích nhất tháng này</p>
+        </div>
+        <div class="featured-grid">
+          <article class="product-card product-card--featured" data-reveal data-reveal-delay="1">
+            <div class="product-card__badges">
+              <span class="badge badge--hot">Hot</span>
+            </div>
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=600&q=80" 
+                   alt="MacBook Pro M3">
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">MacBook</span>
+              <h3 class="product-card__title">MacBook Pro 14" M3 Pro</h3>
+              <p class="product-card__desc">Chip M3 Pro, 18GB RAM, 512GB SSD</p>
+              <div class="product-card__footer">
+                <div class="product-card__pricing">
+                  <span class="price-current">49.990.000₫</span>
+                  <span class="price-old">54.990.000₫</span>
+                </div>
+                <button class="btn btn--cart" data-product="macbook-pro-m3" data-price="49990000">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12h14"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card product-card--featured" data-reveal data-reveal-delay="2">
+            <div class="product-card__badges">
+              <span class="badge badge--new">Mới</span>
+            </div>
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600&q=80" 
+                   alt="iPhone 15 Pro">
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">iPhone</span>
+              <h3 class="product-card__title">iPhone 15 Pro Max</h3>
+              <p class="product-card__desc">Titanium, A17 Pro, 256GB</p>
+              <div class="product-card__footer">
+                <div class="product-card__pricing">
+                  <span class="price-current">34.990.000₫</span>
+                </div>
+                <button class="btn btn--cart" data-product="iphone-15-pro-max" data-price="34990000">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12h14"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <h2 class="section-title">Tất Cả Sản Phẩm</h2>
+          <div class="products__filters">
+            <button class="filter-btn active" data-filter="all">Tất cả</button>
+            <button class="filter-btn" data-filter="iphone">iPhone</button>
+            <button class="filter-btn" data-filter="macbook">MacBook</button>
+            <button class="filter-btn" data-filter="watch">Watch</button>
+            <button class="filter-btn" data-filter="airpods">AirPods</button>
+          </div>
+        </div>
+        <div class="products-grid">
+          <!-- Product 1 -->
+          <article class="product-card" data-category="iphone" data-reveal data-reveal-delay="1">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400&q=80" 
+                   alt="iPhone 14 Pro">
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">iPhone</span>
+              <h3 class="product-card__title">iPhone 14 Pro</h3>
+              <p class="product-card__desc">Deep Purple, 128GB</p>
+              <div class="product-card__footer">
+                <span class="price-current">24.990.000₫</span>
+                <button class="btn btn--cart" data-product="iphone-14-pro" data-price="24990000">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12h14"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+          <!-- Product 2 -->
+          <article class="product-card" data-category="macbook" data-reveal data-reveal-delay="2">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&q=80" 
+                   alt="MacBook Air M2">
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">MacBook</span>
+              <h3 class="product-card__title">MacBook Air M2</h3>
+              <p class="product-card__desc">Midnight, 8GB RAM, 256GB</p>
+              <div class="product-card__footer">
+                <span class="price-current">27.990.000₫</span>
+                <button class="btn btn--cart" data-product="macbook-air-m2" data-price="27990000">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12h14"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+          <!-- Product 3 -->
+          <article class="product-card" data-category="watch" data-reveal data-reveal-delay="3">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=400&q=80" 
+                   alt="Apple Watch Ultra">
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">Watch</span>
+              <h3 class="product-card__title">Apple Watch Ultra 2</h3>
+              <p class="product-card__desc">Titanium, 49mm GPS + Cellular</p>
+              <div class="product-card__footer">
+                <span class="price-current">21.990.000₫</span>
+                <button class="btn btn--cart" data-product="watch-ultra-2" data-price="21990000">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12h14"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+          <!-- Product 4 -->
+          <article class="product-card" data-category="airpods" data-reveal data-reveal-delay="4">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=400&q=80" 
+                   alt="AirPods Pro">
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">AirPods</span>
+              <h3 class="product-card__title">AirPods Pro (2nd Gen)</h3>
+              <p class="product-card__desc">USB-C, Active Noise Cancellation</p>
+              <div class="product-card__footer">
+                <span class="price-current">6.490.000₫</span>
+                <button class="btn btn--cart" data-product="airpods-pro-2" data-price="6490000">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12h14"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+          <!-- Product 5 -->
+          <article class="product-card" data-category="iphone" data-reveal data-reveal-delay="5">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=400&q=80" 
+                   alt="iPhone 15">
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">iPhone</span>
+              <h3 class="product-card__title">iPhone 15</h3>
+              <p class="product-card__desc">Blue, Dynamic Island, 128GB</p>
+              <div class="product-card__footer">
+                <span class="price-current">22.490.000₫</span>
+                <button class="btn btn--cart" data-product="iphone-15" data-price="22490000">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12h14"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+          <!-- Product 6 -->
+          <article class="product-card" data-category="watch" data-reveal data-reveal-delay="6">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=400&q=80" 
+                   alt="Apple Watch Series 9">
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">Watch</span>
+              <h3 class="product-card__title">Apple Watch Series 9</h3>
+              <p class="product-card__desc">Aluminum, 45mm GPS</p>
+              <div class="product-card__footer">
+                <span class="price-current">10.990.000₫</span>
+                <button class="btn btn--cart" data-product="watch-series-9" data-price="10990000">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12h14"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="products__more" data-reveal>
+          <a href="#" class="btn btn--outline btn--large">Xem Thêm Sản Phẩm</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <h2 class="section-title">Khách Hàng Nói Gì</h2>
+          <p class="section-subtitle">Đánh giá thực tế từ người dùng</p>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial-card glass" data-reveal data-reveal-delay="1">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">"Dịch vụ tuyệt vời! Sản phẩm chính hãng 100%, giao hàng nhanh chóng. Sẽ quay lại mua thêm."</p>
+            <div class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Nguyễn Thị Mai">
+              <div>
+                <strong>Nguyễn Thị Mai</strong>
+                <span>TP. Hồ Chí Minh</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card glass" data-reveal data-reveal-delay="2">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">"MacBook Pro M3 chạy mượt cực kỳ. Giá tốt hơn nhiều nơi khác, nhân viên tư vấn nhiệt tình."</p>
+            <div class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Trần Văn Hùng">
+              <div>
+                <strong>Trần Văn Hùng</strong>
+                <span>Hà Nội</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card glass" data-reveal data-reveal-delay="3">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">"Đã mua iPhone 15 Pro, bảo hành 2 năm rất yên tâm. Hỗ trợ kỹ thuật 24/7 rất chuyên nghiệp!"</p>
+            <div class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Lê Hoàng Anh">
+              <div>
+                <strong>Lê Hoàng Anh</strong>
+                <span>Đà Nẵng</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="cta">
+      <div class="container">
+        <div class="cta__content glass">
+          <h2 class="section-title" data-reveal>Đăng Ký Nhận Ưu Đãi</h2>
+          <p class="section-subtitle" data-reveal data-reveal-delay="1">Nhận ngay voucher 500K cho đơn hàng đầu tiên</p>
+          <form class="cta__form" data-reveal data-reveal-delay="2">
+            <input type="email" placeholder="Nhập email của bạn..." required>
+            <button type="submit" class="btn btn--primary">Đăng Ký</button>
+          </form>
+          <p class="cta__note" data-reveal data-reveal-delay="3">Chúng tôi cam kết bảo mật thông tin của bạn</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">
+            <span class="logo-icon">◆</span>
+            <span>TechStore</span>
+          </a>
+          <p>Cửa hàng công nghệ cao cấp hàng đầu Việt Nam. Cam kết sản phẩm chính hãng, giá tốt nhất.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h4>Sản Phẩm</h4>
+          <ul>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">MacBook</a></li>
+            <li><a href="#">Apple Watch</a></li>
+            <li><a href="#">AirPods</a></li>
+            <li><a href="#">Phụ kiện</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Hỗ Trợ</h4>
+          <ul>
+            <li><a href="#">Hướng dẫn mua hàng</a></li>
+            <li><a href="#">Chính sách bảo hành</a></li>
+            <li><a href="#">Đổi trả sản phẩm</a></li>
+            <li><a href="#">Thanh toán</a></li>
+            <li><a href="#">Vận chuyển</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Liên Hệ</h4>
+          <ul>
+            <li>📍 123 Nguyễn Huệ, Q.1, TP.HCM</li>
+            <li>📞 1900 1234</li>
+            <li>✉️ support@techstore.vn</li>
+            <li>🕐 8:00 - 22:00 hàng ngày</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 TechStore. All rights reserved.</p>
+        <div class="footer__payments">
+          <span>Thanh toán:</span>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" height="20">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" height="20">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar glass" id="cartSidebar">
+    <div class="cart-sidebar__header">
+      <h3>Giỏ Hàng</h3>
+      <button class="cart-close" id="cartClose" aria-label="Đóng">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cart-sidebar__items" id="cartItems">
+      <div class="cart-empty">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 6h15l-1.5 9h-12z"/>
+          <circle cx="9" cy="20" r="1"/>
+          <circle cx="18" cy="20" r="1"/>
+          <path d="M3 3h3l1 3"/>
+        </svg>
+        <p>Giỏ hàng trống</p>
+      </div>
+    </div>
+    <div class="cart-sidebar__footer">
+      <div class="cart-total">
+        <span>Tổng cộng:</span>
+        <span id="cartTotal">0₫</span>
+      </div>
+      <a href="#" class="btn btn--primary btn--large btn--full">Thanh Toán</a>
+    </div>
+  </aside>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+      <polyline points="22 4 12 14.01 9 11.01"/>
+    </svg>
+    <span id="toastMessage">Đã thêm vào giỏ hàng!</span>
+  </div>
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav__items">
+      <a href="#hero" class="mobile-nav__item active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span>Trang chủ</span>
+      </a>
+      <a href="#categories" class="mobile-nav__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7"/>
+          <rect x="14" y="3" width="7" height="7"/>
+          <rect x="14" y="14" width="7" height="7"/>
+          <rect x="3" y="14" width="7" height="7"/>
+        </svg>
+        <span>Danh mục</span>
+      </a>
+      <a href="#products" class="mobile-nav__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <span>Tìm kiếm</span>
+      </a>
+      <button class="mobile-nav__item mobile-nav__item--cart" id="mobileCartBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 6h15l-1.5 9h-12z"/>
+          <circle cx="9" cy="20" r="1"/>
+          <circle cx="18" cy="20" r="1"/>
+          <path d="M3 3h3l1 3"/>
+        </svg>
+        <span class="cart-count" id="mobileCartCount">0</span>
+        <span>Giỏ hàng</span>
+      </button>
+      <a href="#cta" class="mobile-nav__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+        <span>Tài khoản</span>
+      </a>
+    </div>
+  </nav>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
